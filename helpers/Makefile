@@ -1,13 +1,15 @@
-.PHONY: create shell rm
+.PHONY: create run stop
 
-IMAGE := ghcr.io/holbora/dockbox:latest
-SANDBOX := claude
+VERSION ?= latest
+IMAGE := ghcr.io/holbora/dockbox:$(VERSION)
+AGENT := claude
+WORKDIR := $(notdir $(CURDIR))
 
 create:
-	docker sandbox create --template $(IMAGE) $(SANDBOX) .
+	docker sandbox create --template $(IMAGE) $(AGENT) .
 
-shell:
-	docker sandbox shell $(SANDBOX)
+run:
+	docker sandbox run $(AGENT)-$(WORKDIR) -- $(ARGS)
 
-rm:
-	docker sandbox rm $(SANDBOX)
+stop:
+	docker sandbox stop $(AGENT)-$(WORKDIR)

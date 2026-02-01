@@ -20,15 +20,13 @@ Then use:
 
 ```bash
 make create   # create sandbox with current directory
-make shell    # open shell in sandbox
-make rm       # remove sandbox
+make run      # run sandbox
+make stop     # stop sandbox
 ```
 
 ## Pre-configured Servers
 
 - context7
-
-Edit `registry.yaml` to add more servers before building.
 
 ## Inside the Sandbox
 

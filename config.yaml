@@ -1,4 +1,6 @@
-clients: {}
+clients:
+  claude-code:
+    enabled: true
 servers:
   context7:
     enabled: true
