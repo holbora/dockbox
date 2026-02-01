@@ -5,7 +5,23 @@ Docker sandbox template that extends `docker/sandbox-templates:claude-code` with
 ## Usage
 
 ```bash
-docker sandbox create --template claude-code-mcp:latest --load-local-template claude ~/my-project
+docker sandbox create --template ghcr.io/holbora/dockbox:latest my-sandbox ~/my-project
+```
+
+## Helpers
+
+Copy the Makefile to your project for convenience:
+
+```bash
+curl -o Makefile https://raw.githubusercontent.com/holbora/dockbox/main/helpers/Makefile
+```
+
+Then use:
+
+```bash
+make create   # create sandbox with current directory
+make shell    # open shell in sandbox
+make rm       # remove sandbox
 ```
 
 ## Pre-configured Servers
