@@ -16,5 +16,6 @@ RUN mkdir -p ${AGENT_HOME}/.docker/cli-plugins ${AGENT_HOME}/.docker/mcp && \
     chown -R agent:agent ${AGENT_HOME}/.docker
 
 COPY --chown=agent:agent registry.yaml ${AGENT_HOME}/.docker/mcp/registry.yaml
+COPY --chown=agent:agent config.yaml ${AGENT_HOME}/.docker/mcp/config.yaml
 
 USER agent

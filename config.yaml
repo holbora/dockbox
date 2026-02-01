@@ -1,0 +1,4 @@
+clients: {}
+servers:
+  context7:
+    enabled: true

@@ -2,12 +2,6 @@
 
 Docker sandbox template that extends `docker/sandbox-templates:claude-code` with Docker MCP Gateway pre-installed.
 
-## Build
-
-```bash
-docker buildx build --platform linux/amd64,linux/arm64 -t claude-code-mcp:latest .
-```
-
 ## Usage
 
 ```bash
